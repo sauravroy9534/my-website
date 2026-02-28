@@ -1,0 +1,8 @@
+﻿Place your romantic background song here as:
+
+romantic.mp3
+
+Path expected by website:
+assets/romantic.mp3
+
+Tip: choose a legally usable MP3 file you own or have rights to share.
