@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saurav + Ritu | A Question From The Heart</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <video id="bgVideo" class="bg-video" autoplay loop playsinline preload="auto">
+    <source src="assets/love-loop.mp4" type="video/mp4" />
+  </video>
+  <div class="video-dim" aria-hidden="true"></div>
+  <div class="backdrop" aria-hidden="true"></div>
+  <div id="floatingKisses" class="floating-kisses" aria-hidden="true"></div>
+  <div id="hoorayLayer" class="hooray-layer" aria-hidden="true"></div>
+  <section id="splash" class="splash-screen">
+    <div class="splash-content">
+      <p class="eyebrow">A Special Evening For Ritu</p>
+      <h1 class="splash-title">Saurav Presents: Our Forever Story</h1>
+      <p class="lead">Dim the room lights, wear your smile, and click below.</p>
+      <button id="enterExperienceBtn" class="primary cinematic-btn" type="button">Enter The Experience</button>
+    </div>
+  </section>
+
+  <div id="musicControls" class="music-controls hidden">
+    <button id="musicToggleBtn" class="ghost" type="button">Pause Music</button>
+    <button id="videoToggleBtn" class="ghost" type="button">Pause Video</button>
+    <label for="volumeControl">Volume</label>
+    <input id="volumeControl" type="range" min="0" max="1" step="0.05" value="0.6" />
+  </div>
+
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/romantic.mp3" type="audio/mpeg" />
+  </audio>
+
+  <main class="app-shell">
+    <section id="intro" class="card hidden">
+      <p class="eyebrow">For Ritu</p>
+      <h1>Before one big question, a little journey.</h1>
+      <p class="lead">Every right answer reveals a memory. At the end, I have something from my heart.</p>
+      <p class="desktop-note">Made specially for your laptop screen.</p>
+
+      <div class="mode-picker">
+        <p>Choose game mode:</p>
+        <button class="mode-btn selected" data-mode="easy" type="button">Easy</button>
+        <button class="mode-btn" data-mode="hard" type="button">Hard</button>
+      </div>
+
+      <button id="startBtn" class="primary" type="button">Start Journey</button>
+    </section>
+
+    <section id="quiz" class="card hidden">
+      <div class="progress-wrap">
+        <span id="progressText">Stage 1</span>
+        <div class="progress-bar"><span id="progressFill"></span></div>
+      </div>
+      <div class="quiz-meta">
+        <span id="scoreText">Score: 0</span>
+        <span id="negativeText">Negative: 0</span>
+        <span id="timerText">Timer: --</span>
+      </div>
+      <div class="quiz-grid">
+        <div>
+          <img id="memoryImage" class="memory-image" src="" alt="Memory stage image" />
+          <p id="imageFallback" class="img-fallback hidden">Place images as <code>images/1.png</code> or <code>images/1.jpeg</code> (also jpg/webp).</p>
+        </div>
+        <div>
+          <h2 id="questionText"></h2>
+          <p id="hintText" class="hint"></p>
+          <div id="answerArea"></div>
+        </div>
+      </div>
+
+      <div class="feedback-row">
+        <p id="feedbackText" aria-live="polite"></p>
+        <button id="nextBtn" class="primary hidden" type="button">Next</button>
+      </div>
+    </section>
+
+    <section id="proposal" class="card hidden">
+      <p class="eyebrow">Saurav to Ritu</p>
+      <h2>Ritu, will you be my <span id="wifeTarget" class="wife-target">wife</span>?</h2>
+      <p class="lead">From Nov 16, 2022 to today, every memory says the same thing: I want forever with you.</p>
+      <div id="proposalButtons" class="proposal-actions">
+        <button id="yesBtn" class="proposal-character yes-character" type="button">
+          <img class="char-boy" src="assets/characters/boy-openmoji.svg" alt="Cute boy character" />
+          <span id="yesLabel" class="char-sign">YES</span>
+          <img id="yesMoodIcon" class="char-mood" src="assets/characters/smile-face-openmoji.svg" alt="Smile mood" />
+        </button>
+        <button id="noBtn" class="proposal-character no-character" type="button">
+          <img class="char-boy" src="assets/characters/boy-openmoji.svg" alt="Angry boy character" />
+          <span class="char-sign">NO</span>
+          <img class="char-mood" src="assets/characters/angry-face-openmoji.svg" alt="Angry mood" />
+        </button>
+      </div>
+      <p id="noReaction" class="hint"></p>
+    </section>
+
+    <section id="celebration" class="card hidden">
+      <h2>She said YES.</h2>
+      <p class="lead">My heart is blooming. This is our beginning.</p>
+      <div id="bloomField" class="bloom-field" aria-hidden="true"></div>
+      <button id="openGalleryBtn" class="primary" type="button">Open Our Memories</button>
+    </section>
+
+    <section id="gallery" class="card hidden">
+      <h2>Our Memories</h2>
+      <p class="lead">Every photo is one step of our story.</p>
+      <div id="galleryGrid" class="gallery-grid"></div>
+      <p id="galleryHelp" class="hint">Add photos as <code>images/1.png</code> or <code>images/1.jpeg</code> (also jpg/webp).</p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
