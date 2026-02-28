@@ -101,7 +101,7 @@ const questions = [
 ];
 
 const imageExtensions = ["png", "jpg", "jpeg", "webp"];
-const STILLNESS_SECONDS = 60; // change this line for final timing
+const STILLNESS_SECONDS = 180; // change this line for final timing
 const STILLNESS_MOVE_TOLERANCE = 6;
 const PROPOSAL_HINT_TEXT = "Hint: do not look here and there. To be in my life as wife, stay silently dont chase the another boy. 🔍";
 
